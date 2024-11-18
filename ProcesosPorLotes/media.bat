@@ -1,5 +1,5 @@
 @echo off
-REM Script de prueba
+REM Script de la media
 REM Autor: Victor
 REM Fecha: 18/11/24
 
