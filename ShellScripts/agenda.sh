@@ -25,7 +25,7 @@ while true; do
 		 1)
 			read -p "Introduzca el DNI de la persona " dni
 
-			if grep -d "dni:" "Agenda"; then
+			if grep "dni:" "Agenda"; then
 
 			echo "El dni ya está archivado en esta agenda"
 
