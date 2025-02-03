@@ -85,7 +85,7 @@ while true; do
 		*)
 
 			echo "Error la opción marcada no existe"
-			exit
+			break
 
 		;;
 
