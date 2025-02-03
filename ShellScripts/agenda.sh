@@ -13,19 +13,13 @@ while true; do
 
 	read -p "Elija na opción de las anteriores " option
 
-	if [ $option -eq 5 ]; then
-
-		break;
-
-	fi
-
 
 	case $option in
 
 		 1)
 			read -p "Introduzca el DNI de la persona " dni
 
-			if grep "dni:" "Agenda"; then
+			if grep "dni:" Agenda.txt; then
 
 			echo "El dni ya está archivado en esta agenda"
 
@@ -35,7 +29,7 @@ while true; do
 			read -p "Introduzca los apellidos de la persona " apell
 			read -p "Introduzca la localidad donde reside " localidad
 
-			echo "$dni:$name:$apell:$localidad" >> "Agenda"
+			echo "$dni:$name:$apell:$localidad" >> Agenda.txt
 
 			echo "Se ha añadido con éxito la nueva entrada"
 
@@ -44,7 +38,7 @@ while true; do
 		2)
 
 			read "Introduzca el dni de la persona que busca " dni
-			buscar=$(grep $dni "Agenda")
+			buscar=$(grep $dni Agenda.txt)
 
 			if $buscar; then
 
@@ -62,9 +56,9 @@ while true; do
 
 		3)
 
-			if [ -s "Agenda" ]; then
+			if [ -s Agenda.txt ]; then
 
-				cat "Agenda"
+				cat Agenda.txt
 
 			else
 
@@ -76,7 +70,7 @@ while true; do
 
 		4)
 
-			cat /dev/null > "Agenda"
+			cat /dev/null > Agenda.txt
 			echo "El fichero Agenda se ha vaciado con éxito"
 
 		;;
@@ -84,7 +78,7 @@ while true; do
 		5)
 
 			echo "Finalizando"
-			exit
+			break
 
 		;;
 
