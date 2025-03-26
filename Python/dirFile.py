@@ -19,7 +19,7 @@ for i in contenido:
     elif os.path.isdir(r):
         listaDirectorios.append(r)
 
-while True
+while True:
     print("A - Eliminar fichero")
     print("B - Mostrar info de un directorio")
     print("C - Copiar fichero en destino a elegir")
